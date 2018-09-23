@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<script src="js/jQuery3.3.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid" style="position: relative; min-height: 100%">
+		<!-- Header part -->
+		<div class="row">
+			<div class="header">
+				<h1>JOBORTAL</h1>
+				<h3>The Job Portal</h3>
+			</div>
+		</div>
+		<!-- End header -->
+		<!-- Navigation -->
+		<div class="row">
+			<nav class="navbar navbar-default navbar-dusk">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div id="topnav" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="apply.html">APPLY</a></li>
+							<li class="active"><a href="contact.html">CONTACT US</a></li>
+							<li><a href="about.html">ABOUT US</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- End navigation -->
+		<!-- content -->
+		<div class="row">
+			<!-- main content -->
+			<div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-1 col-lg-6 col-lg-offset-1">
+				<div class="row">
+					<form class="form-horizontal">
+						<!-- name -->
+						<div class="form-group">
+							<label for="#txtName" class="control-label col-md-2">
+								Name<span class="required">*</span>
+							</label>
+							<div class="col-md-9">
+								<input type="text" id="txtName" class="form-control" maxlength="30" placeholder="Enter your name">
+								<div class="msg">Invalid or no name entered.</div>
+							</div>
+						</div>
+						<!-- mobile no -->
+						<div class="form-group">
+							<label for="#txtMobile" class="control-label col-md-2">
+								Mobile No.<span class="required">*</span>
+							</label>
+							<div class="col-md-9">
+								<input type="text" id="txtMobile" class="form-control" maxlength="10" placeholder="Enter your Mobile no.">
+								<div class="msg">Invalid or no mobile number.</div>
+							</div>
+						</div>
+						<!-- email -->
+						<div class="form-group">
+							<label for="#txtEmail" class="control-label col-md-2">
+								Email ID<span class="required">*</span>
+							</label>
+							<div class="col-md-9">
+								<input type="text" id="txtEmail" class="form-control" maxlength="40" placeholder="Enter your Email address">
+								<div class="msg">Invalid or no email address.</div>
+							</div>
+						</div>
+						<!-- submit button -->
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+								<button type="submit" class="btn btn-primary col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4 col-md-4" onclick="return validate();">
+									Submit
+								</button>
+							</div>
+						</div>
+						<!-- end submit button -->
+					</form>
+				</div>
+			</div>
+			<!-- end main content -->
+			<!-- side content -->
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1">
+				<div class="row">
+					<!-- Apply -->
+					<div class="col-xs-12">
+						<h4>
+							We are always there to help for you. Apply and let us.
+						</h4>
+						<div style="text-align: center">
+							<a href="index.html" class="btn btn-info btn-lg">Apply Here</a>
+						</div>
+					</div>
+					<!-- end apply -->
+				</div>
+				<div class="row">
+					<!-- about us -->
+					<div class="col-xs-12">
+						<h4>
+							We value you and your effort. Why we do? That is why us.
+						</h4>
+						<div style="text-align: center">
+							<a href="about.html" class="btn btn-info btn-lg">About Us</a>
+						</div>
+					</div>
+					<!-- end about us -->
+				</div>
+			</div>
+				<!-- end side content -->
+		</div>
+	</div>
+		<!-- end content -->
+	<div class="container-fluid">
+		<!-- footer -->
+		<div class="row footer">
+			<!-- <div class="col-xs-12"> -->
+				<h4>Website designed by Mindfire Solutions</h4>
+			<!-- </div> -->
+		</div>
+		<!-- end footer -->
+	</div>
+</body>
+<head>
+	<script src="js/validation.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			console.log('ready');
+			//$('#header').load('header.html')
+			$('nav').affix({offset:{top:$('nav').offset().top}})
+			$('input').change(function() {
+				var v = new Validate();
+				v.valid(this);
+			});
+		});
+		function validate() {
+			var v = new Validate();
+			var status = true;
+			$('#txtName').each(function() {
+				if(v.isEmpty(this.value) || !v.validName(this.value)) {
+					v.invalid(this);
+					status = false;
+				}
+			});
+			$('#txtMobile').each(function() {
+				if(v.isEmpty(this.value) || !v.validNumber(this.value, 10, 10)) {
+					v.invalid(this);
+					status = false;
+				}
+			});
+			$('#txtEmail').each(function() {
+				if(v.isEmpty(this.value) || !v.validEmail(this.value)) {
+					v.invalid(this);
+					status = false;
+				}
+			});
+			$('[class*="err"]').first().focus();
+			return status;	
+		}
+	</script>
+</head>
+</html>

@@ -1,0 +1,130 @@
+/* 
+base color : tofu = #eae6da;
+base color : coconut milk = #f0ede5; 
+primary : russet orange = #e47a2e
+seconary : nebula blue = #3f69aa
+complementry : limelight = #f1ea7f	
+
+ */
+html{
+	height: 100%;
+}
+body {
+	background-color: #eae6da;
+	height: 100%;
+	position: realtive;
+}
+.header {
+	background-color: #e47a2e;
+	color: #fff;
+	padding: 5px 20px;
+	position: relative;
+}
+.header h1,
+.header h3 {
+	padding: 0;
+	margin:0;
+}
+.navbar-dusk {
+	background-color: #3f69aa;
+	border: 0;
+	color: white;
+	font-size: 10px;
+	min-height: 25px;
+}
+.navbar-dusk .navbar-brand:hover,
+.navbar-dusk .navbar-brand {
+	height: auto;
+	color: white;
+	font-size: 13px;
+	padding: 10px 10px;
+
+}
+.navbar-dusk .navbar-toggle {
+	border-color: #e47a2e;
+}
+.navbar-dusk .navbar-toggle .icon-bar {
+	background-color: #e47a2e;
+}
+.navbar-dusk .navbar-toggle:focus,
+.navbar-dusk .navbar-toggle:hover {
+	background-color: #e47a2e;
+}
+.navbar-dusk .navbar-toggle:focus .icon-bar,
+.navbar-dusk .navbar-toggle:hover .icon-bar {
+	background-color: #3f69aa;
+}
+
+.navbar-dusk .navbar-nav > .active a,
+.navbar-dusk .navbar-nav > .active a:hover {
+	background-color: #e47a2e;
+	color: white;
+}
+.navbar-dusk .navbar-nav li a {
+	padding: 13px;
+	color: white;
+}
+.navbar-dusk .navbar-nav li a:hover {
+	background-color: #e47a2e;
+	color: white;
+}
+.affix {
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.carousel-indicators li {
+	border-color: #e47a2e;
+}
+.carousel-indicators .active {
+	background-color: #e47a2e;
+}
+.carousel-caption {
+	/* color: transparent; */
+	text-shadow: -1px 0 #e47a2e, 0 1px #e47a2e, 1px 0 #e47a2e, 0 -1px #e47a2e;
+}
+.carousel-img {
+	display: inline;
+	margin: 0 auto 0 auto;
+	min-width: 400px;
+}
+.left {
+	text-align: left;
+}
+form {
+	background-color: #f0ede5;
+	border: 2px solid gray;
+	border-radius: 7px;
+	padding: 10px 5px;
+}
+.footer {
+	align-items: flex-end;
+	background-color: gray;
+	color: lightgray;
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	min-height: 125px;
+	padding: 10px 5px;
+}
+.err,
+.err:focus {
+	border-color: red;
+	box-shadow: .15px .15px 10px -2px red;
+}
+.msg {
+	color: transparent;
+	padding: 0 15px 0 15px;
+	margin: -3px 0 -17px 0;
+}
+.err-msg {
+	/* color: #e47a2e; */
+	color: red;
+}
+.required {
+	color: red;
+	/* font-size: 7px; */
+}
+.text-center {
+	text-align: center;
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Apply : Jobortal The Job portal</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<script src="js/jQuery3.3.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid" style="position: relative; min-height: 100%">
+		<!-- Header part -->
+		<div class="row">
+			<div class="header">
+				<h1>JOBORTAL</h1>
+				<h3>The Job Portal</h3>
+			</div>
+		</div>
+		<!-- End header -->
+		<!-- Navigation -->
+		<div class="row">
+			<nav class="navbar navbar-default navbar-dusk">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div id="topnav" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">HOME</a></li>
+							<li class="active"><a href="apply.html">APPLY</a></li>
+							<li><a href="contact.html">CONTACT US</a></li>
+							<li><a href="about.html">ABOUT US</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- End navigation -->
+		<!-- content -->
+		<div class="row">
+			<form class="form-horizontal col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<!-- first name -->
+				<div class="form-group">
+					<label class="control-label col-md-2 col-lg-2" for="#txtFirstName">
+						First Name<span class="required">*</span>
+					</label>
+					<div class="col-md-10 col-lg-10">
+						<input type="text" id="txtFirstName" class="form-control" placeholder="Enter first name" maxlength="15">
+						<div class="msg">Invalid or no first name entered.</div>
+					</div>
+				</div>
+				<!-- last name -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#txtLastName">
+						Last Name<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<input type="text" id="txtLastName" class="form-control" placeholder="Enter last name" maxlength="30">
+						<div class="msg">Invalid or no Last name entered.</div>
+					</div>
+				</div>
+				<!-- father's name -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#txtFatherName">
+						Father's Name<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<input type="text" id="txtFatherName" class="form-control" placeholder="Enter your father's name" maxlength="50">
+						<div class="msg">Invalid or no father's name entered.</div>
+					</div>
+				</div>
+				<!-- email -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#txtEmail">
+						Email<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<input type="text" id="txtEmail" class="form-control" placeholder="Enter email ID" maxlength="40">
+						<div class="msg">Invalid or no email address.</div>
+					</div>
+				</div>
+				<!-- Mobile no. -->
+				<div class="form-group">
+					<label for="#txtMobile" class="control-label col-md-2">
+						Mobile No.<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<input type="text" id="txtMobile" class="form-control" maxlength="10" placeholder="Enter your Mobile no.">
+						<div class="msg">Invalid or no mobile number entered.</div>
+					</div>
+				</div>
+				<!-- gender -->
+				<div class="form-group">
+					<label class="control-label col-md-2">
+						Gender<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<label class="radio-inline">
+							<input type="radio" name="rdGender" value="male" checked="true"> Male
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="rdGender" value="female"> Female
+						</label>
+					</div>
+				</div>
+				<!-- date of birth -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#txtDOB">
+						Date of Birth<span class="required">*</span>
+					</label>
+					<div class="col-md-10" style="padding:0">
+						<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+							<input type="date" id="txtDOB" class="form-control col-md-6">
+							<div class="msg">Invalid or no date of birth selected.</div>
+						</div>
+					</div>
+				</div>
+				<!-- age -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#txtAge">
+						Age:
+					</label>
+					<div class="col-md-10" style="padding:0">
+						<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+							<span id="txtAge" class="form-control" data-toggle="tooltip" title="Age will be calculated automatically" data-placement="auto"></span>
+						</div>
+					</div>
+				</div>
+				<!-- Education Graduation -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#edu1">
+						Graduation<span class="required">*</span>
+					</label>
+					<div class="col-md-10" id="edu1">
+						<!-- education 1 college -->
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu1CollegeName">
+									School/College name<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu1CollegeName" class="form-control" maxlength="50">
+									<div class="msg">Invalid or no school/college name entered</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 1 board -->
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu1Board">
+									Board<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu1Board" class="form-control" maxlength="20">
+									<div class="msg">Invalid or no education board entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 1 Total marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu1TMarks">
+									Total Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu1TMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no total marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 1 Obtained Marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu1OMarks">
+									Obtained Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu1OMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no obtained marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 1 percentage -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu1Percentage">
+									Percentage
+								</label>
+								<div class="col-md-12">
+									<span id="txtEdu1Percentage" class="form-control" data-toggle="tooltip" title="Percentage will be calculated automatically" data-placement="auto"></span>
+								</div>
+							</div>
+						</div>
+						<!-- end education 1 percentage -->
+					</div>
+				</div>
+				<!-- end eduacation graduation -->
+				<!-- education intermediate -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#edu2">
+						Intermediate/Diploma or equivalent
+					</label>
+					<div class="col-md-10">
+						<!-- education 2 college -->
+						<div class="col-sm-6" id="edu1">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu2CollegeName">
+									School/College name<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu2CollegeName" class="form-control" maxlength="50">
+									<div class="msg">Invalid or no school/college name entered</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 2 board -->
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu2Board">
+									Board<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu2Board" class="form-control" maxlength="10">
+									<div class="msg">Invalid or no education board entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 2 total marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu2TMarks">
+									Total Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu2TMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no total marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 2 Obtained marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu2OMarks">
+									Obtained Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu2OMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no obtained marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 2 percentage -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu2Percentage">
+									Percentage
+								</label>
+								<div class="col-md-12">
+									<span id="txtEdu2Percentage" class="form-control" data-toggle="tooltip" title="Percentage will be calculated automatically" data-placement="auto"></span>
+								</div>
+							</div>
+						</div>
+						<!-- end education 2 percentage -->
+					</div>
+				</div>
+				<!-- end education intermidiate -->
+				<!-- education matric -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#edu3">
+						Matric/10th or equivalent 
+					</label>
+					<div class="col-md-10" id="edu3">
+						<!-- Education 3 collage -->
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu3CollegeName">
+									School/College name<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu3CollegeName" class="form-control" maxlength="50">
+									<div class="msg">Invalid or no school/college name entered</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 3 board -->
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu3Board">
+									Board<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu3Board" class="form-control" maxlength="10">
+									<div class="msg">Invalid or no education board entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 3 Total marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu3TMarks">
+									Total Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu3TMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no total marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 3 Obtained marks -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu3OMarks">
+									Obtained Marks<span class="required">*</span>
+								</label>
+								<div class="col-md-12">
+									<input type="text" id="txtEdu3OMarks" class="form-control" maxlength="3">
+									<div class="msg">Invalid or no obtained marks entered.</div>
+								</div>
+							</div>
+						</div>
+						<!-- education 3 percentage -->
+						<div class="col-sm-4" id="edu1">
+							<div class="form-group">
+								<label class="control-label col-md-12" style="text-align: left" for="#txtEdu3Percentage">
+									Percentage
+								</label>
+								<div class="col-md-12">
+									<span id="txtEdu3Percentage" class="form-control" data-toggle="tooltip" title="Percentage will be calculated automatically" data-placement="auto"></span>
+								</div>
+							</div>
+						</div>
+						<!-- education 3 percentage -->
+					</div>
+				</div>
+				<!-- end education matric  -->
+				<!-- file upload -->
+				<div class="form-group">
+					<label class="control-label col-md-2" for="#fileResume">
+						Resume<span class="required">*</span>
+					</label>
+					<div class="col-md-10">
+						<input type="file" id="fileResume" class="form-control">
+						<div class="msg">No .pdf file is selected.</div>
+					</div>
+				</div>
+				<!-- buttons -->
+				<div class="form-group">
+					<!-- submit button -->
+					<div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-4 col-md-offset-2 col-md-4">
+						<button type="submit" class="btn btn-primary btn-block" style="margin-bottom:5px" onclick="return validate();">
+							Submit
+						</button>
+					</div>
+					<!-- clear button -->
+					<div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-4 col-md-offset-1 col-md-4">
+						<button type="reset" class="btn btn-primary btn-block">
+							Clear
+						</button>
+					</div>
+					<!-- end clear button -->
+				</div>
+				<!-- end buttons -->
+			</form>
+		</div>
+		<!-- end content -->
+		</div>
+		<div class="container-fluid">
+		<!-- footer -->
+		<div class="row footer">
+			<!-- <div class="col-xs-12"> -->
+				<h4>Website designed by Mindfire Solutions</h4>
+			<!-- </div> -->
+		</div>
+		<!-- end footer -->
+	</div>
+</body>
+
+<script src="js/validation.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		console.log('ready');
+		$('nav').affix({offset:{top:$('nav').offset().top}})
+		$('[data-toggle="tooltip"]').tooltip();
+		$('input').change(function() {
+			var v = new Validate();
+			v.valid(this);
+		});
+		$('#txtDOB').blur(function() {
+			var v = new Validate();
+			if(!v.validDate(this.value)) {
+				v.invalid(this);
+				return;
+			}
+			var dob = this.value.split('-');
+			var date = new Date();
+			var year = date.getFullYear() - dob[0];
+			var month = date.getMonth() - dob[1] + 1;
+			var day = date.getDate() - dob[2];
+			if(day < 0) {
+				day += 30;
+				month -=1;
+			}
+			if(month < 0) {
+				month += 12;
+				year -= 1;
+			}
+			$('#txtAge').text(year);
+			//console.log(aYear);console.log(aMonth);console.log(aDay);
+		});
+		$('[id*="TMarks"]').each(function(i) {
+			var v = new Validate();
+			$(this).blur(function() {
+				var tMarks = this.value;
+				var oMarks = $('[id*="OMarks"]')[i].value;
+				if(v.isEmpty(tMarks) || !v.validNumber(tMarks, 3)) {
+					v.invalid(this);
+					return;
+				}
+				if(v.isEmpty(oMarks) || !v.validNumber(oMarks, 3)) {
+					return;
+				}
+				oMarks = parseInt(oMarks);
+				tMarks = parseInt(tMarks);
+				var per = (oMarks * 100) / tMarks;
+				$('[id*="Percentage"]')[i].innerHTML = per.toFixed(2) + '%';
+			});
+		});
+		$('[id*="OMarks"]').each(function(i) {
+			var v = new Validate();
+			$(this).blur(function() {
+				var oMarks = this.value;
+				var tMarks = $('[id*="TMarks"]')[i].value;
+				if(v.isEmpty(oMarks) || !v.validNumber(oMarks, 3)) {
+					v.invalid(this);
+					return;
+				}
+				if(v.isEmpty(tMarks) || !v.validNumber(tMarks, 3)) {
+					return;
+				}
+				oMarks = parseInt(oMarks);
+				tMarks = parseInt(tMarks);
+				var per = (oMarks * 100) / tMarks;
+				$('[id*="Percentage"]')[i].innerHTML = per.toFixed(2) + '%';
+			});
+		});
+	});
+	function validate() {
+		var v = new Validate();
+		var status = true;
+		$('[id*=Name]').each(function() {
+			if(v.isEmpty(this.value) || !v.validName(this.value)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('#txtEmail').each(function() {
+			if(v.isEmpty(this.value) || !v.validEmail(this.value)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('#txtMobile').each(function() {
+			if(v.isEmpty(this.value) || !v.validNumber(this.value, 10)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('#txtDOB').each(function() {
+			if(v.isEmpty(this.value)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('[id*="Board"]').each(function() {
+			if(v.isEmpty(this.value) || !v.validName(this.value)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('[id*=Marks]').each(function() {
+			if(v.isEmpty(this.value) || !v.validNumber(this.value, 3)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('#fileResume').each(function() {
+			if(v.isEmpty(this.value) || !v.validFile(this.value)) {
+				v.invalid(this);
+				status = false;
+			}
+		});
+		$('[class*="err"]').first().focus();
+		return status;
+	}
+</script>
+</html>
